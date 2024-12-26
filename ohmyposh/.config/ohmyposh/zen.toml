@@ -1,0 +1,76 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[palette]
+os = '#7F849C'
+pink = '#F5C2E7'
+lavender = '#B4BEFE'
+teal = '#94e2d5'
+green = '#A6E3A1'
+blue =  '#89B4FA'
+red = '#F38BA8'
+flamingo = '#F2CDCD'
+peach = '#FAB387'
+text = '#1E1E2E'
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'plain'
+    foreground = 'p:lavender'
+    background = 'transparent'
+    template = '{{ div .Ms 1000 }}s'
+    [blocks.segments.properties]
+      threshold = 5000
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'session'
+    style = 'diamond'
+    leading_diamond = ''
+    trailing_diamond = ''
+    interactive = true
+    background = 'p:green'
+    foreground = 'p:text'
+    template = " {{ .UserName }}@<i>{{ .HostName }}</i> "
+    [blocks.segments.properties]
+      always_enabled = true
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'diamond'
+    # leading_diamond = ''
+    trailing_diamond = ''
+    interactive = true
+    background = 'p:pink'
+    foreground = 'p:text'
+    [blocks.segments.properties]
+      style = 'full'
+      home_icon = '  '
+
+  [[blocks.segments]]
+    type = 'git'
+    style = 'diamond'
+    trailing_diamond = ''
+    interactive = true
+    background = 'p:teal'
+    foreground = 'p:text'
+    template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} "
+    [properites]
+      branch_icon = ''
+      fetch_status = true
+      fetch_upstream_icon = true
+      source = "cli"
+
+[transient_prompt]
+  foreground = 'p:blue'
+  background = 'transparent'
+  template = '󰅂 '
