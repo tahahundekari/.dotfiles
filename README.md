@@ -16,3 +16,6 @@ cd ~/.dotfiles
 stow nvim zsh ohmyposh
 ```
 
+### NeoVim
+I use [NvChad]("https://github.com/NvChad/NvChad") as my Neovim configuration.
+
