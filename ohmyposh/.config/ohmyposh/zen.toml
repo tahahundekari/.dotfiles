@@ -36,7 +36,7 @@ text = '#1E1E2E'
     type = 'session'
     style = 'diamond'
     leading_diamond = ''
-    trailing_diamond = ''
+    trailing_diamond = ''
     interactive = true
     background = 'p:green'
     foreground = 'p:text'
@@ -48,7 +48,7 @@ text = '#1E1E2E'
     type = 'path'
     style = 'diamond'
     # leading_diamond = ''
-    trailing_diamond = ''
+    trailing_diamond = ''
     interactive = true
     background = 'p:pink'
     foreground = 'p:text'
@@ -59,7 +59,7 @@ text = '#1E1E2E'
   [[blocks.segments]]
     type = 'git'
     style = 'diamond'
-    trailing_diamond = ''
+    trailing_diamond = ''
     interactive = true
     background = 'p:teal'
     foreground = 'p:text'
@@ -69,6 +69,18 @@ text = '#1E1E2E'
       fetch_status = true
       fetch_upstream_icon = true
       source = "cli"
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    foreground = 'p:blue'
+    background = 'transparent'
+    type = 'text'
+    template = '󱞩'
+    style = 'plain'
 
 [transient_prompt]
   foreground = 'p:blue'
