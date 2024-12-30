@@ -1,4 +1,5 @@
-source /Users/taha/.zprofile
+source $HOME/.zprofile
+
 # Set the Zinit home directory
 ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
 
@@ -13,6 +14,7 @@ source "$ZINIT_HOME/zinit.zsh"
 
 # Set Prompt
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Plugins
 zinit light zsh-users/zsh-completions
@@ -42,6 +44,8 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls $realpath'
 
 # Aliases
 alias grep="grep --color=auto"
@@ -50,11 +54,7 @@ alias ls="ls --color"
 alias ip="ip -c"
 alias vi="nvim"
 alias cat="bat"
-alias uni="cd /Users/taha/Library/Mobile\ Documents/com~apple~CloudDocs/Uni"
 alias update="brew update && brew upgrade && brew upgrade --cask && brew cleanup"
-alias cxx="ssh git@cppprog.db.in.tum.de"
-alias cxx-docker-build="docker build . -t cppprog"
-alias cxx-docker-run="docker run --rm -v $PWD/:/homework cppprog /homework/assessment.sh"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -63,3 +63,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# Load private aliases
+source $HOME/private_aliases
