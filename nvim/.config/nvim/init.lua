@@ -5,5 +5,7 @@ vim.cmd("set shiftwidth=4")
 
 vim.g.mapleader = " "
 
+vim.cmd("set number")
+
 require("config.lazy")
 
