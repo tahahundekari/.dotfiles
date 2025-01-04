@@ -13,7 +13,7 @@ fi
 source "$ZINIT_HOME/zinit.zsh"
 
 # Set Prompt
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/sortofpretty.toml)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # Plugins
@@ -66,3 +66,4 @@ source <(ng completion script)
 
 # Load private aliases
 source $HOME/private_aliases
+
