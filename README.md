@@ -6,16 +6,7 @@ To find dotfiles for a specific OS, check the branches. E.g. the `mac` branch co
 ### Installation
 ```bash
 cd && git clone git@github.com:tahahundekari/.dotfiles.git
-```
-
-```bash
 cd ~/.dotfiles
+stow nvim zsh ohmyposh tmux
 ```
-
-```bash
-stow nvim zsh ohmyposh
-```
-
-### NeoVim
-I use [NvChad]("https://github.com/NvChad/NvChad") as my Neovim configuration.
 
