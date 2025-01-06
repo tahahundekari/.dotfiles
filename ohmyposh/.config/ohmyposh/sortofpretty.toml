@@ -12,6 +12,7 @@ blue =  '#89B4FA'
 red = '#F38BA8'
 flamingo = '#F2CDCD'
 peach = '#FAB387'
+mauve = '#CBA6F7'
 text = '#1E1E2E'
 
 [[blocks]]
@@ -25,7 +26,7 @@ text = '#1E1E2E'
     leading_diamond = ''
     trailing_diamond = ''
     interactive = true
-    background = 'p:red'
+    background = 'p:mauve'
     foreground = 'p:text'
     template = "  "
     [blocks.segments.properties]
