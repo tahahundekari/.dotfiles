@@ -21,23 +21,20 @@ text = '#1E1E2E'
   newline = true
 
   [[blocks.segments]]
-    type = 'text'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    interactive = true
+    type = 'os'
+    style = 'accordion'
+    leading_powerline_symbol = ""
+    powerline_symbol = ""
     background = 'p:mauve'
     foreground = 'p:text'
-    template = "  "
+    template = " {{ .Icon }} "
     [blocks.segments.properties]
       always_enabled = true
 
   [[blocks.segments]]
     type = 'session'
-    style = 'diamond'
-    # leading_diamond = ''
-    trailing_diamond = ''
-    interactive = true
+    style = 'accordion'
+    powerline_symbol = ""
     background = 'p:green'
     foreground = 'p:text'
     template = " {{ .UserName }}@<i>{{ .HostName }}</i> "
@@ -46,10 +43,8 @@ text = '#1E1E2E'
 
   [[blocks.segments]]
     type = 'path'
-    style = 'diamond'
-    # leading_diamond = ''
-    trailing_diamond = ''
-    interactive = true
+    style = 'accordion'
+    powerline_symbol = ""
     background = 'p:pink'
     foreground = 'p:text'
     [blocks.segments.properties]
@@ -58,9 +53,8 @@ text = '#1E1E2E'
 
   [[blocks.segments]]
     type = 'git'
-    style = 'diamond'
-    trailing_diamond = ''
-    interactive = true
+    style = 'accordion'
+    powerline_symbol = ""
     background = 'p:teal'
     foreground = 'p:text'
     template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} "
