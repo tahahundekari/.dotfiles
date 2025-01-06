@@ -65,5 +65,8 @@ export NVM_DIR="$HOME/.nvm"
 source <(ng completion script)
 
 # Load private aliases
+if [ ! -f $HOME/private_aliases ]; then
+    touch $HOME/private_aliases
+fi
 source $HOME/private_aliases
 
