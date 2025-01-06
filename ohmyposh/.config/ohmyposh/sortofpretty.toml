@@ -20,9 +20,21 @@ text = '#1E1E2E'
   newline = true
 
   [[blocks.segments]]
-    type = 'session'
+    type = 'text'
     style = 'diamond'
     leading_diamond = ''
+    trailing_diamond = ''
+    interactive = true
+    background = 'p:red'
+    foreground = 'p:text'
+    template = "  "
+    [blocks.segments.properties]
+      always_enabled = true
+
+  [[blocks.segments]]
+    type = 'session'
+    style = 'diamond'
+    # leading_diamond = ''
     trailing_diamond = ''
     interactive = true
     background = 'p:green'
