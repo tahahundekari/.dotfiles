@@ -6,3 +6,4 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set number")
 
 vim.opt.guifont = 'JetBrainsMono Nerd Font:h12'
+
