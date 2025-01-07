@@ -25,7 +25,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 And finally, you can clone this repository and use GNU Stow to install the dotfiles:
 ```bash
-cd && git clone git@github.com:tahahundekari/.dotfiles.git
+cd && git clone https://github.com/tahahundekari/.dotfiles.git
 cd ~/.dotfiles
 stow nvim zsh ohmyposh tmux
 ```
