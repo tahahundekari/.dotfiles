@@ -14,6 +14,9 @@ source "$ZINIT_HOME/zinit.zsh"
 
 # Set Prompt
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/sortofpretty.toml)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
 eval "$(zoxide init --cmd cd zsh)"
 
 # Plugins
