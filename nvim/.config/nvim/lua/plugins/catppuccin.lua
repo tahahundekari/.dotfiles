@@ -5,6 +5,7 @@ return {
     config = function()
         require("catppuccin").setup({
             flavor = "mocha",
+            transparent_background = true,
             integrations = {
                 treesitter = true,
                 nvimtree = {

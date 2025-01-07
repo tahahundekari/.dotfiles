@@ -1,4 +1,4 @@
-source $HOME/.zprofile
+source $HOME/.zprofile
 
 # Set the Zinit home directory
 ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
