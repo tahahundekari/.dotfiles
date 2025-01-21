@@ -4,6 +4,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
 vim.cmd("set number")
+vim.cmd("set relativenumber")
 
 vim.opt.guifont = 'JetBrainsMono Nerd Font:h12'
 vim.opt.termguicolors = true
