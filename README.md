@@ -56,4 +56,4 @@ source <(ng completion script)
 
 ### Usage
 #### TMUX
-- `Ctrl + s` is the prefix/leader key.
+- `Ctrl + b` is the prefix/leader key.
