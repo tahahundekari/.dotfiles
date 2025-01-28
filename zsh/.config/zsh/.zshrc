@@ -73,3 +73,5 @@ if [ ! -f $HOME/private_aliases ]; then
 fi
 source $HOME/private_aliases
 
+
+export PATH=$PATH:/Users/taha/.spicetify
