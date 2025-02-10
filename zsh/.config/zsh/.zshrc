@@ -58,6 +58,7 @@ alias ip="ip -c"
 alias vi="nvim"
 alias cat="bat"
 alias update="brew update && brew upgrade && brew upgrade --cask && brew cleanup"
+alias tcs="tmux new-session -c"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
