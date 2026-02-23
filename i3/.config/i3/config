@@ -246,32 +246,32 @@ set $bg-alt #373B41
 exec_always feh --no-startup-id --bg-fill $wallpaper
 
 # Set colour scheme
-exec_always --no-startup-id wal -i $wallpaper
+# exec_always --no-startup-id wal -i $wallpaper
 
-set_from_resource $fg i3wm.color5 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
-set_from_resource $primary i3wm.color1
-set_from_resource $base i3wm.color0
-set_from_resource $bg-alt i3wm.color8
+# set_from_resource $fg i3wm.color5 #f0f0f0
+# set_from_resource $bg i3wm.color2 #f0f0f0
+# set_from_resource $primary i3wm.color1
+# set_from_resource $base i3wm.color0
+# set_from_resource $bg-alt i3wm.color8
 
 
 # class                 border  backgr. text indicator child_border
-client.focused          $fg     $bg     $text  $bg-alt       $fg
-client.focused_inactive $fg     $bg     $text  $fg       $fg
-client.unfocused        $mantle     $bg     $text  $mantle       $mantle
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $text  $bg       $bg
+# client.focused          $fg     $bg     $text  $bg-alt       $fg
+# client.focused_inactive $fg     $bg     $text  $fg       $fg
+# client.unfocused        $mantle     $bg     $text  $mantle       $mantle
+# client.urgent           $bg     $bg     $fg  $bg       $bg
+# client.placeholder      $bg     $bg     $text  $bg       $bg
+# 
+# client.background       $bg
 
-client.background       $bg
+client.focused           $mauve    $base $text  $lavender $mauve
+client.focused_inactive  $mantle       $base $text  $mantle $mantle
+client.unfocused         $mantle        $base $text  $mantle $mantle
+client.urgent            $peach        $base $peach $overlay0  $peach
+client.placeholder       $base     $base $text  $overlay0  $overlay0
+client.background        $base
 
-# client.focused           $mauve    $base $text  $lavender $mauve
-# client.focused_inactive  $mantle       $base $text  $mantle $mantle
-# client.unfocused         $mantle        $base $text  $mantle $mantle
-# client.urgent            $peach        $base $peach $overlay0  $peach
-# client.placeholder       $base     $base $text  $overlay0  $overlay0
-# client.background        $base
-
-bindsym $mod+d exec dmenu_run -h 26 -nb "$base" -nf "$fg" -sb "$bg-alt" -sf "$fg"
+bindsym $mod+d exec dmenu_run -h 26 -nb "$base" -nf "$peach" -sb "$mauve" -sf "$peach"
 
 # i3status
 # bar {
@@ -288,9 +288,6 @@ bindsym $mod+d exec dmenu_run -h 26 -nb "$base" -nf "$fg" -sb "$bg-alt" -sf "$fg
 # Set keyboard layout
 exec "setxkbmap -layout us -variant de_se_fi -option caps:escape"
 
-# Start clipboard
-exec --no-startup-id clipit
-
 # Start compositor
 exec --no-startup-id picom
 
@@ -306,8 +303,8 @@ exec_always --no-startup-id /home/taha/.config/polybar/launch.sh
 bindsym $mod+Shift+p exec relaunch_polybar
 
 # Set Chromium Theme
-exec_always --no-startup-id /home/taha/.local/share/ChromiumPywal/generate-theme.sh
+# exec_always --no-startup-id /home/taha/.local/share/ChromiumPywal/generate-theme.sh
 
 # Reset discord theme
-exec_always --no-startup-id pywal-discord
+# exec_always --no-startup-id pywal-discord
 
